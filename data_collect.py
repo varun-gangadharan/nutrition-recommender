@@ -1,6 +1,8 @@
 import requests
 from pymongo import MongoClient
 import time
+import pandas as pd
+import json
 
 client = MongoClient()  # assumes a running MongoDB instance on localhost:27017
 db = client['recipe_db']
@@ -51,19 +53,8 @@ def get_similar_recipes(recipe_id):
     return fetch_recipes(url, {})
 
 
-# Use examples:
-
-recipe_collection = db['recipe_collection']
-# Fetching and storing recipes by ingredients
-get_and_store_recipes('ingredients', recipe_collection, ingredients='apples,flour,sugar')
-
-# Fetching and storing recipes by nutrients
-get_and_store_recipes('nutrients', recipe_collection, minCarbs=10, maxCarbs=50, minProtein=5, maxProtein=20)
-
-# Fetching recipe information
-recipe_info = get_recipe_information(716429)  # Use an appropriate recipe ID
-print(recipe_info)
-
-# Fetching similar recipes
-similar_recipes = get_similar_recipes(716429)  # Use an appropriate recipe ID
-print(similar_recipes)
+def get_df_from_db(collection):
+    # Fetch all documents from your collection
+    data = list(collection.find())
+    
+    # Transform MongoDB data into a pandas
