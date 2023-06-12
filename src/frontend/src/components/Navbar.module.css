@@ -1,0 +1,10 @@
+/* Navbar.module.css */
+.navbar {
+    background-color: #61dafb;
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}

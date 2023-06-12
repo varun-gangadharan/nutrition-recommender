@@ -1,0 +1,13 @@
+/* Footer.module.css */
+.footer {
+    background-color: #61dafb;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.text {
+    color: white;
+    text-align: center;
+}
