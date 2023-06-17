@@ -1,0 +1,34 @@
+.carousel-item {
+    height: 60vh; 
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.carousel-item .card {
+    max-width: 50%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-family: 'Comfortaa', cursive;
+    font-size: calc(10px + 2vmin);
+    color: #e8dab2;
+}
+
+.card-text {
+    font-family: 'Comfortaa', cursive;
+    font-size: calc(8px + 2vmin);
+    color: #e8dab2;
+}

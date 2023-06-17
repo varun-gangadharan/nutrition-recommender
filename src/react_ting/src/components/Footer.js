@@ -1,11 +1,13 @@
 import React from 'react';
+import './Footer.css'; 
+
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <Container fluid style={{backgroundColor: '#f8f9fa', marginTop: '20px', padding: '20px'}}>
-            <Row>
-                <Col>
+        <Container fluid className="footer">
+            <Row className="justify-content-between">
+                <Col sm={5} className="footer-col">
                     <h5>Join Our Newsletter</h5>
                     <Form>
                         <Form.Group controlId="formBasicEmail">
@@ -21,7 +23,7 @@ const Footer = () => {
                     </Form>
                 </Col>
 
-                <Col>
+                <Col sm={5} className="footer-col">
                     <h5>Follow us</h5>
                     <p>Stay connected on social media</p>
                 </Col>

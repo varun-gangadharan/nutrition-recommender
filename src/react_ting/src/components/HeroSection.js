@@ -1,7 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';  // Ensure the styles are imported too
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Card, Popover, OverlayTrigger } from 'react-bootstrap';
+import yummyImg from './yummy.jpg';
 
 function HeroSection() {
     const popover = (
@@ -14,11 +15,11 @@ function HeroSection() {
     );
 
     return (
-        <Carousel autoPlay infiniteLoop useKeyboardArrows dynamicHeight>
-            <div>
+        <Carousel autoPlay infiniteLoop useKeyboardArrows dynamicHeight showThumbs={false} showStatus={false}>
+            <div className="hero-card">
                 <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="your-image-url" />
+                    <Card>
+                        <Card.Img variant="top" src={yummyImg} className="hero-image"/>
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
                             <Card.Text>
@@ -28,14 +29,8 @@ function HeroSection() {
                     </Card>
                 </OverlayTrigger>
             </div>
-            {/* Add more slides as needed */}
         </Carousel>
     );
 }
-
-function handleClick() {
-    console.log('Card was clicked!');
-  }
-  
 
 export default HeroSection;

@@ -1,19 +1,32 @@
-import React from 'react';
-import { VegaLite } from 'react-vega';
+import React, { useEffect, useState } from 'react';
+
+const Card = ({ title, image }) => (
+  <div>
+    <h2>{title}</h2>
+    <img src={image} alt={title} />
+  </div>
+);
 
 const Chart = () => {
-  const spec = {
-    "width": 400,
-    "height": 200,
-    "data": { "url": "data/cars.json" },
-    "mark": "point",
-    "encoding": {
-      "x": { "field": "Horsepower", "type": "quantitative" },
-      "y": { "field": "Miles_per_Gallon", "type": "quantitative" },
-    },
-  };
+  const [data, setData] = useState(null);
 
-  return <VegaLite spec={spec} />;
+  useEffect(() => {
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []);
+
+  if (!data) {
+    return null;
+  }
+
+  return (
+    <div>
+      {data.map(recipe => (
+        <Card key={recipe.id} title={recipe.title} image={recipe.image} />
+      ))}
+    </div>
+  );
 };
 
 export default Chart;

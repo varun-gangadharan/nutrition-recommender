@@ -1,0 +1,25 @@
+.navbar-custom {
+    background-color: #e8dab2; /* Light waffle color */
+    font-family: 'Comfortaa', cursive;
+    padding: 10px;
+}
+
+.navbar-brand-custom {
+    color: #755139; /* Dark waffle color */
+    font-size: calc(10px + 2vmin);
+    font-weight: bold;
+}
+
+.navbar-toggler-custom {
+    border-color: #755139; /* Dark waffle color */
+}
+
+.nav-link-custom {
+    color: #755139; /* Dark waffle color */
+    font-size: calc(8px + 2vmin);
+    margin-right: 10px;
+}
+
+.nav-link-custom:hover {
+    color: #d19763; /* Medium waffle color */
+}
