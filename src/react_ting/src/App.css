@@ -52,3 +52,8 @@ body {
 .content-wrap {
   flex: 1;
 }
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+}

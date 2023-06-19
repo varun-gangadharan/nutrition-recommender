@@ -1,34 +1,46 @@
 .carousel-item {
-    height: 60vh; 
+    height: 60vh; /* Adjust this value according to your need */
     position: relative;
     text-align: center;
     color: white;
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-item .card {
-    max-width: 50%;
+    width: 50%; /* decrease card width */
+    max-width: 800px;
     margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .card-img-top {
-    width: 100%;
-    height: auto;
+    width: 80%; /* Set specific width */
+    height: 60%; /* Set specific height */
+    object-fit: cover; /* Make sure the image covers the space without distorting */
+    margin: auto; /* Center the image */
+    border-radius: 15px;
 }
 
 .card-title {
     font-family: 'Comfortaa', cursive;
     font-size: calc(10px + 2vmin);
     color: #e8dab2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .card-text {
     font-family: 'Comfortaa', cursive;
     font-size: calc(8px + 2vmin);
     color: #e8dab2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card .btn {
+    margin-right: 10px;
 }

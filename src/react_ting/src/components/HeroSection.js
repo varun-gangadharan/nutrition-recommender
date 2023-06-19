@@ -1,33 +1,21 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Card, Popover, OverlayTrigger } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import yummyImg from './yummy.jpg';
 
 function HeroSection() {
-    const popover = (
-        <Popover id="popover-basic">
-            <Popover.Title as="h3">Popover Title</Popover.Title>
-            <Popover.Content>
-                This is the popover content
-            </Popover.Content>
-        </Popover>
-    );
 
     return (
         <Carousel autoPlay infiniteLoop useKeyboardArrows dynamicHeight showThumbs={false} showStatus={false}>
             <div className="hero-card">
-                <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-                    <Card>
-                        <Card.Img variant="top" src={yummyImg} className="hero-image"/>
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </OverlayTrigger>
+                <Card>
+                    <Card.Img variant="top" src={yummyImg} className="hero-image"/>
+                    <Card.Body>
+                        <Button variant="primary" href="/meal-inspiration">Get Inspired</Button>
+                        <Button variant="secondary" href="/quiz">Take Quiz</Button>
+                    </Card.Body>
+                </Card>
             </div>
         </Carousel>
     );

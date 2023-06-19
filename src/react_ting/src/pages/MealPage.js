@@ -51,7 +51,7 @@ function MealPage() {
     <div className="mealPageContainer">
       <SearchComponent setSearchTerm={setSearchTerm} />
       <NumRecipesSelector setNumMeals={setNumMeals} />
-      <Filter setFilterSettings={setFilterSettings} />
+      {/* <Filter setFilterSettings={setFilterSettings} /> */}
       <MealShowcase meals={selectedMeals} />
     </div>
   );
