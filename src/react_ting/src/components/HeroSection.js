@@ -15,7 +15,7 @@ function HeroSection() {
                         <Button variant="primary" href="/meal-inspiration">Get Inspired</Button>
                         <Button variant="secondary" href="/quiz">Take Quiz</Button>
                     </Card.Body>
-                </Card>
+                </Card>,.   
             </div>
         </Carousel>
     );
