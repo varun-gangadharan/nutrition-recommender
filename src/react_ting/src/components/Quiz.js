@@ -200,7 +200,7 @@ function Quiz() {
             <div className="quiz-result">
                 <h1>Quiz Completed</h1>
                 <Button variant="secondary" onClick={restartQuiz}>Restart Quiz</Button>
-                <h2>Your meal plan:</h2>
+                <h2>Your personalized AI generated meal suggestions:</h2>
                 <div className="recipes-container">
                     {filteredRecipes.map((recipe, index) => (
                         <Card className="recipe-card" key={index}>
