@@ -4,17 +4,14 @@ import MealCard from './MealCard';
 
 function MealShowcase({ meals }) {
   return (
-    <Container fluid>
-      <Row>
-        {meals.length > 0 ? meals.map((meal) => (
-          <Col xs={12} sm={6} md={4} lg={3} key={meal.id}>
-            <MealCard meal={meal} />
-          </Col>
-        )) : <Col><p>No meals match your filter settings.</p></Col>}
-      </Row>
+    <Container fluid style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', padding: '20px' }}>
+      {meals.length > 0 ? meals.map((meal) => (
+        <div style={{margin: '15px'}} key={meal.id}>
+          <MealCard meal={meal} />
+        </div>
+      )) : <Col><p>No meals match your filter settings.</p></Col>}
     </Container>
   );
 }
-  
 
 export default MealShowcase;

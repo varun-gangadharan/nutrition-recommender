@@ -1,11 +1,10 @@
 .footer {
-    background-color: #e8dab2;
+    background-color: #3d5a80; 
     padding: 10px 0;
-    color: #755139;
+    color: #e8dab2; 
     font-family: 'Comfortaa', cursive;
     font-size: calc(8px + 1vmin);
     text-align: center;
-
     position: relative; /* Change from absolute to fixed */
     left: 0;
     right: 0;
@@ -15,10 +14,10 @@
 
 
 .footer a {
-    color: #755139; /* Dark waffle color */
+    color: #e8dab2;
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: #d19763; /* Medium waffle color on hover */
+    color: #98c1d9;
 }

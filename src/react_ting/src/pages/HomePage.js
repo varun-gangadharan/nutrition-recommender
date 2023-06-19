@@ -10,7 +10,7 @@ function HomePage() {
         <Container className="intro-section p-5 mb-3 rounded">
           <h1>Welcome to Foodie's Paradise</h1>
           <p>
-            Discover new recipes, find inspiration for your next meal, and take fun quizzes to test your food knowledge.
+            Discover new recipes, find inspiration for your next meal, and take a quiz to get a AI generated personalized meal plan tailored for you.
             Whether you're a seasoned chef or just starting out, there's something here for every food lover.
           </p>
         </Container>

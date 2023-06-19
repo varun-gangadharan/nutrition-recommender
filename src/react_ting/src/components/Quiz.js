@@ -199,20 +199,20 @@ function Quiz() {
         return (
             <div className="quiz-result">
                 <h1>Quiz Completed</h1>
-                <Button variant="secondary" onClick={restartQuiz}>Restart Quiz</Button>
+                <Button className="restart-button" onClick={restartQuiz}>Restart Quiz</Button>
                 <h2>Your personalized AI generated meal suggestions:</h2>
                 <div className="recipes-container">
-                    {filteredRecipes.map((recipe, index) => (
-                        <Card className="recipe-card" key={index}>
-                            <Card.Body>
-                                <Card.Title>{recipe["Recipe Name"]}</Card.Title>
-                                <Card.Text>{recipe["Ingredients: Produce"]}</Card.Text>
-                                <Button variant="primary" href={recipe["link"]}>Read More</Button>
-                            </Card.Body>
-                        </Card>
-                    ))}
+                {filteredRecipes.map((recipe, index) => (
+                    <Card className="recipe-card" key={index}>
+                        <Card.Body>
+                            <Card.Title>{recipe["Recipe Name"]}</Card.Title>
+                            <Card.Text>{recipe["Ingredients: Produce"]}</Card.Text>
+                            <Button className="button button-primary" href={recipe["link"]}>Read More</Button>
+                        </Card.Body>
+                    </Card>
+                ))}
                 </div>
-                <Button variant="secondary" onClick={() => downloadRecipes(filteredRecipes)}>Save All Recipes</Button>
+                <Button className="save-all-button" onClick={() => downloadRecipes(filteredRecipes)}>Save All Recipes</Button>
             </div>
         );
 
@@ -225,17 +225,21 @@ function Quiz() {
                 <Card.Header><h3>{quizQuestions[currentQuestion].question}</h3></Card.Header>
                 <Card.Body>
                     <Form>
-                        {quizQuestions[currentQuestion].options.map((option, index) => (
-                            <Form.Check
-                                key={index}
+                    {quizQuestions[currentQuestion].options.map((option, index) => (
+                        <div key={index} className="quiz-option">
+                            <input
                                 type="radio"
-                                label={option}
+                                id={`option-${index}`}
+                                name={`question-${currentQuestion}`}
                                 value={option}
                                 checked={selectedAnswer === option}
                                 onChange={handleAnswerChange}
-                                className="quiz-option"
                             />
-                        ))}
+                            <label htmlFor={`option-${index}`}>
+                                {option}
+                            </label>
+                        </div>
+                    ))}
                     </Form>
                     <Button variant="primary" onClick={handleNextQuestion}>Next</Button>
                 </Card.Body>

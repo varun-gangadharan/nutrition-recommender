@@ -26,11 +26,12 @@
     font-size: calc(8px + 2vmin);
     margin-right: 10px;
     transition: all 0.5s ease-in-out; /* Transition effect */
+    text-decoration: none; /* Removes underline */
 }
 
 .nav-link-custom:hover {
     color: #d19763; /* Medium waffle color on hover */
-    text-decoration: underline; /* Underline link on hover */
+    text-decoration: none; /* Removes underline on hover */
 }
 
 @media (max-width: 768px) {
@@ -41,5 +42,5 @@
 
 .active {
     color: #d19763 !important; /* Medium waffle color for active link */
-    text-decoration: underline; /* Underline active link */
+    text-decoration: none; /* Removes underline for active link */
 }

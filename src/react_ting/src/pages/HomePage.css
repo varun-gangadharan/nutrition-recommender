@@ -12,41 +12,45 @@
 }
 
 .content-section {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for readability */
   padding: 30px;
   border-radius: 15px;
   max-width: 800px;
   width: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 .intro-section,
 .about-section {
-  margin-bottom: 20px;
+  padding: 30px; /* Add more space */
+  margin-bottom: 20px; /* Decreased the margin-bottom for less space between sections */
 }
 
 .intro-section h1,
 .about-section h1 {
   font-family: 'Comfortaa', cursive;
-  font-size: calc(10px + 2vmin);
-  color: #755139; /* Dark waffle color */
+  font-size: calc(14px + 2vmin); /* Increase font size */
+  color: #52320a; /* Darker color for better contrast */
 }
 
 .intro-section p,
 .about-section p {
   font-family: 'Comfortaa', cursive;
-  font-size: calc(8px + 2vmin);
-  color: #755139; /* Dark waffle color */
+  font-size: calc(12px + 2vmin); /* Increase font size */
+  color: #52320a; /* Darker color for better contrast */
 }
 
 .quick-access {
   display: flex;
   justify-content: space-around;
-  margin: 20px 0;
+  margin: 20px 0; /* Decreased the margin for less space */
 }
-
 .access-btn {
-  font-size: calc(8px + 2vmin);
+  font-size: calc(12px + 2vmin); /* Increase font size */
+  transition: all 0.5s ease-in-out; /* Add transition effect */
 }
 
-
-
+.access-btn:hover {
+  transform: scale(1.05); /* Add hover effect */
+  color: #fff; /* Change text color on hover */
+}
